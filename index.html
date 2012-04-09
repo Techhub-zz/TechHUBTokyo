@@ -8,6 +8,9 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
+	<link rel="stylesheet" type="text/css" href="stylesheets/basic.css"/>
+	<link rel="stylesheet" type="text/css" href="stylesheets/items.css"/>
+
     <title>TechHUB Tokyo 2012</title>
   </head>
 
@@ -18,7 +21,7 @@
         <header class="inner">
           
           <h1 id="project_title">TechHUB Tokyo 2012</h1>
-          <h2 id="project_tagline">under developing</h2>
+          <h2 id="project_tagline">学生向け無料技術講義 開催中！</h2>
 
           <section id="downloads">
             <a class="zip_download_link" href="https://github.com/Techhub/TechHUBTokyo/zipball/master">Download this project as a .zip file</a>
@@ -27,37 +30,217 @@
         </header>
     </div>
 
+
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
+	
+	<li class = "itemList">
+		<div id="item">
+			<div class="subjectBase">
+				<div class="imageBox">
+					<a id="mapLinkID0" href=""><img id="mapImageID0" src="" /></a>
+				
+				
+					<div class="titleBlock">
+							<a id="titleImageID0" href="
+								http://www.techhubjp.org/subjectdetail?index=">
+								<img id="subjectImageID0"src="" />
+								<p id="subjectTitleID0" class="titleBlock"></p>
+							</a>	
+					</div>
+					<div class="subjectBlock">
+						<div class="subjectDate">
+							<p id="yearID0" class="year"></p>
+							<p id="monthAndDayID0" class="monthAndDay"></p>
+							<p id="weekID0" class="week"></p>
+							<p id="subscriptionID0" class="subjectDescription"></p>
+</div>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact support@github.com and we’ll help you sort it out.</p>
-      </section>
+					
+						<div class="division"></div>
+					
+						<div class="subjectDescription">
+							<p id="subjectDescriptionID0" class="description"></p>
+						</div>
+					
+						<div class="division"></div>
+					
+						<div class="enter">
+							<p class="limit">定員</p>
+							<p id="peopleNumID0" class="peopleNum"></p>
+							<p class="num">名</p>
+							
+							
+							<a id="contentsID0" href="
+								http://www.techhubjp.org/subjectdetail?index=">
+								<img id="detailImageID0" src="" />
+							</a>
+						</div>
+					
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</li>
+	</section>
     </div>
+	
+<!-- js loading -->
+<script type="text/javascript">
+
+	function addRefToID(linkID, addURL) {
+		var baseTag0 = document.getElementById(linkID);
+		baseTag0.href = baseTag0.href + addURL;
+	}
+
+	function setRefToID(linkID, linkURL) {
+		var baseTag1 = document.getElementById(linkID);
+		baseTag1.href = linkURL;
+	}
+	
+	function setImageToID(linkID, imageURL) {
+		var baseTag2 = document.getElementById(linkID);
+		baseTag2.src = imageURL;
+	}
+	
+	function setInnerTextID(linkID, text) {
+		var baseTag3 = document.getElementById(linkID);
+		baseTag3.innerHTML = text;
+	}
+
+	google.load("visualization", "1", {'packages':['table']});
+
+	init=function(){
+	    var sourceSheet="https://spreadsheets.google.com/spreadsheet/pub?hl=ja&hl=ja&key=0Ah5AXQBL-Nz3dEpJcVZ2Uy1KTGpJNEFZdTZQaUxQa0E";
+	    var query = new google.visualization.Query(sourceSheet);
+	    query.send(handleResponse);
+	}
+	google.setOnLoadCallback(init);
+
+
+	
+	var handleResponse=function(response){
+		var div=document.getElementById('res');
+	  	if(response.isError()) {
+	    	div.innerHTML = response.getDetailedMessage();
+	    	return;
+	  	}
+	
+	  	var data = response.getDataTable();
+	
+		var escapeHtml = function(text) {
+			if (text == null) {
+				return '';
+			}
+			return text.replace(/&/g, '&').
+			replace(/</g, '<').
+			replace(/>/g, '>').
+			replace(/"/g, '"');
+		}
+	  	for (var row = 0; row < data.getNumberOfRows(); row++) {
+
+			var currentIndex = escapeHtml(data.getFormattedValue(row, 14));//ID	param
+			addRefToID("contentsID"+row, currentIndex-0);
+			addRefToID("titleImageID"+row, currentIndex-0);
+			
+			for (var col = 0; col < data.getNumberOfColumns(); col++) {
+				switch (col) {
+					case 1://mapLinkID
+					setRefToID("mapLinkID"+row, escapeHtml(data.getFormattedValue(row, col)));
+					break;
+					
+					case 0://mapImageID
+					setImageToID("mapImageID"+row, escapeHtml(data.getFormattedValue(row, col)));
+					break;
+										
+					case 3://logoLinkID
+					//setRefToID("logoLinkID"+row, escapeHtml(data.getFormattedValue(row, col)));
+					break;
+					
+					case 2://logoImageID
+					//setImageToID("logoImageID"+row, escapeHtml(data.getFormattedValue(row, col)));
+					break;
+
+					case 4://subjectImageID
+					setImageToID("subjectImageID"+row, escapeHtml(data.getFormattedValue(row, col)));
+					break;
+					
+					case 5://subjectTitleID
+					setInnerTextID("subjectTitleID"+row, escapeHtml(data.getFormattedValue(row, col)));
+					break;
+					
+					case 6://yearID
+					setInnerTextID("yearID"+row, escapeHtml(data.getFormattedValue(row, col)));
+					break;
+					
+					case 7://monthAndDayID
+					setInnerTextID("monthAndDayID"+row, escapeHtml(data.getFormattedValue(row, col)));
+					break;
+					
+					case 8://weekID
+					setInnerTextID("weekID"+row, escapeHtml(data.getFormattedValue(row, col)));
+					break;
+					
+					case 9://subscriptionID
+					setInnerTextID("subscriptionID"+row, escapeHtml(data.getFormattedValue(row, col)));
+					break;
+					
+					case 10://subjectDescriptionID
+					setInnerTextID("subjectDescriptionID"+row, escapeHtml(data.getFormattedValue(row, col)));
+					break;
+					
+					case 11://peopleNumID
+					setInnerTextID("peopleNumID"+row, escapeHtml(data.getFormattedValue(row, col)));
+					break;
+					
+					
+					case 12://detailImageID
+					
+					var num = escapeHtml(data.getFormattedValue(row, col));
+					switch (num) {
+						case "0":
+						setImageToID("detailImageID"+row, "http://www.techhubjp.org/wp-content/themes/constellation/image/inDetailButtons/inDetail0.png");
+						break;
+						
+						case "1":
+						setImageToID("detailImageID"+row, "http://www.techhubjp.org/wp-content/themes/constellation/image/inDetailButtons/inDetail1.png");
+						break;
+						
+						case "2":
+						setImageToID("detailImageID"+row, "http://www.techhubjp.org/wp-content/themes/constellation/image/inDetailButtons/inDetail2.png");
+						break;
+						
+						case "3":
+						setImageToID("detailImageID"+row, "http://www.techhubjp.org/wp-content/themes/constellation/image/inDetailButtons/inDetail3.png");
+						break;
+						
+						case "4":
+						setImageToID("detailImageID"+row, "http://www.techhubjp.org/wp-content/themes/constellation/image/inDetailButtons/inDetail4.png");
+						break;
+						
+						case "5":
+						setImageToID("detailImageID"+row, "http://www.techhubjp.org/wp-content/themes/constellation/image/inDetailButtons/inDetail5.png");
+						break;
+						}
+					break;
+					
+					case 13://subjectID
+					//setRefToID("subjectLinkID"+row, escapeHtml(data.getFormattedValue(row, col)));
+					//setRefToID("subjectLinkIDSub"+row, escapeHtml(data.getFormattedValue(row, col)));
+					break;
+					
+					
+					
+					default:
+					break;
+				}
+			}
+	  	}
+	}
+</script>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">

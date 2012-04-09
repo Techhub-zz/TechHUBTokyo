@@ -1,0 +1,170 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+.itemList {
+    display: block;
+	padding-top:10px;
+	padding-bottom:10px;
+	
+/*	background-color:#d1d1d1;*/
+	background-color:#efeff0;
+	-webkit-border-radius: 7px;
+}
+
+.itemList p {
+	line-height: 1em;
+	margin: 0px 0px 0em;
+}
+
+
+/*base-size*/
+#item .subjectBase {
+	height:176px;
+}
+
+#item .imageBox img {
+	float:left;
+	-webkit-border-radius: 10px;
+	width: 80px;
+	height: 80px;
+	
+	margin-top:6px;
+	margin-right:4px;
+	margin-left:2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*main:subject*/
+#item .subjects {
+	float:left;
+}
+
+#item .titleBlock {
+	float:left;
+	font-size:42px;
+	height:92px;
+}
+
+
+#item .subjects .titleBlock p {
+	float:left;
+	
+	font-size:42px;
+	font-weight:bold;
+	
+	margin-top:10px;
+	margin-left:5px;
+	height:56px;
+	color:#666666;
+}
+
+#item .subjectBlock .subjectDate {
+	float:left;
+	height:92px;
+}
+
+
+
+#item .subjectBlock .subjectDate .year {
+	font-size:14px;
+/*	margin-left:5px;
+	margin-top:5px;
+*/
+}
+
+#item .subjectBlock .subjectDate .monthAndDay {
+	font-size:20px;
+	font-weight:bold;
+	margin-left:5px;
+	margin-top:5px;
+}
+
+#item .subjectBlock .subjectDate .week {
+	font-size:24px;
+}
+
+#item .subjectBlock .subscription .subjectDescription {
+	font-size:14px;
+}
+
+
+
+
+
+
+
+#item .subjectBlock .subjectDescription .description {
+	float:left;
+	width:320px;
+	height:113px;
+	
+	font-size:18px;
+	margin-top:5px;
+	margin-left:2px;
+	font-weight:bold;
+	
+  	line-height:1.4em;
+	color:#000000;
+}
+
+
+
+#item .subjectBlock .enter {
+	float:left;
+	width:118px;
+	height:113px;
+	
+	color:#000000;
+}
+#item .subjectBlock .enter .limit {
+	font-size:14px;
+	margin-top:5px;
+	margin-left:2px;
+}
+#item .subjectBlock .enter .peopleNum {
+	float:left;
+	font-size:20px;
+	font-weight:bold;
+	
+	margin-left:26px;
+	margin-top:5px;
+}
+#item .subjectBlock .enter .num {
+	font-size:18px;
+	margin-top:30px;
+}
+
+#item .subjectBlock .enter img{
+	width: 113px;
+	height: auto;
+	
+	margin-left:0px;
+}
+
+
+
+#item .subjectBlock .division {
+	float:left;
+	
+	margin-top:15px;
+	
+	background-image:url(../image/descriptionLine.png);
+  	background-repeat:repeat-y;
+	background-position:center top;
+	width:1px;
+	margin-right:4px;
+	height:86px;
+}
+
+
