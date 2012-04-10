@@ -7,9 +7,6 @@
 	padding-top:10px;
 	padding-bottom:10px;
 	
-/*	background-color:#d1d1d1;*/
-	background-color:#efeff0;
-	-webkit-border-radius: 7px;
 }
 
 .itemList p {
@@ -19,31 +16,35 @@
 
 
 /*base-size*/
-#item .subjectBase {
-	height:176px;
+#item .subjectTitle {
+	height:92px;
+}
+
+#item .subjectDetail {
+	height:70px;
+}
+
+#item img {
+	
+  margin: 0px 0 0px 0;
+  border: 0px solid #ebebeb;
+
+  box-shadow: 0 0 0px #ebebeb;
+  -webkit-box-shadow: 0 0 0px #ebebeb;
+  -moz-box-shadow: 0 0 0px #ebebeb;
+  -o-box-shadow: 0 0 0px #ebebeb;
+  -ms-box-shadow: 0 0 0px #ebebeb;
+
+  padding: 5px;
 }
 
 #item .imageBox img {
 	float:left;
-	-webkit-border-radius: 10px;
 	width: 80px;
 	height: 80px;
 	
-	margin-top:6px;
-	margin-right:4px;
-	margin-left:2px;
+	margin:0 2px 0 2px;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /*main:subject*/
 #item .subjects {
@@ -51,15 +52,12 @@
 }
 
 #item .titleBlock {
+	margin-top:24px;
 	float:left;
 	font-size:42px;
-	height:92px;
 }
 
-
-#item .subjects .titleBlock p {
-	float:left;
-	
+#item .subjects .titleBlock p {	
 	font-size:42px;
 	font-weight:bold;
 	
@@ -69,102 +67,91 @@
 	color:#666666;
 }
 
-#item .subjectBlock .subjectDate {
+#item  .subjectDate {
+	width:182px;
+	height:70px;
 	float:left;
-	height:92px;
 }
 
-
-
-#item .subjectBlock .subjectDate .year {
-	font-size:14px;
-/*	margin-left:5px;
+#item  .subjectDate .year {
+	float:left;
+	font-size:18px;
 	margin-top:5px;
-*/
+	margin-left:5px;
+	width:56px;
 }
 
-#item .subjectBlock .subjectDate .monthAndDay {
-	font-size:20px;
+#item  .subjectDate .monthAndDay {
+	font-size:18px;
 	font-weight:bold;
 	margin-left:5px;
 	margin-top:5px;
 }
 
-#item .subjectBlock .subjectDate .week {
-	font-size:24px;
-}
-
-#item .subjectBlock .subscription .subjectDescription {
+#item  .subjectDate .subjectDescription {
 	font-size:14px;
+	
+	margin-top:0.4em;
+	margin-left:10px;
 }
 
-
-
-
-
-
-
-#item .subjectBlock .subjectDescription .description {
-	float:left;
-	width:320px;
-	height:113px;
+#item .subjectDescription .description {
 	
-	font-size:18px;
+	font-size:16px;
 	margin-top:5px;
-	margin-left:2px;
+	margin-left:190px;
 	font-weight:bold;
 	
-  	line-height:1.4em;
-	color:#000000;
+  	line-height:1.3em;
 }
 
 
 
-#item .subjectBlock .enter {
+#item .subjectStatus {
+	float:right;
+	background-color:#ffffff;
+	height:40px;
+}
+#item .subjectStatus .limit {
 	float:left;
-	width:118px;
-	height:113px;
-	
-	color:#000000;
-}
-#item .subjectBlock .enter .limit {
+	width:30px;
 	font-size:14px;
 	margin-top:5px;
 	margin-left:2px;
 }
-#item .subjectBlock .enter .peopleNum {
+#item .subjectStatus .peopleNum {
+	color:#666666;
 	float:left;
+	width:30px;	
+	font-size:24px;
+	font-weight:bold;
+	
+	margin-left:26px;
+	margin-top:10px;
+}
+#item .subjectStatus .maxNum {
+	color:#000000;
+	float:left;
+	width:10px;	
 	font-size:20px;
 	font-weight:bold;
 	
 	margin-left:26px;
-	margin-top:5px;
+	margin-top:8px;
 }
-#item .subjectBlock .enter .num {
-	font-size:18px;
-	margin-top:30px;
-}
-
-#item .subjectBlock .enter img{
-	width: 113px;
-	height: auto;
-	
-	margin-left:0px;
-}
-
-
-
-#item .subjectBlock .division {
+#item .subjectStatus .num {
 	float:left;
-	
-	margin-top:15px;
-	
-	background-image:url(../image/descriptionLine.png);
-  	background-repeat:repeat-y;
-	background-position:center top;
-	width:1px;
-	margin-right:4px;
-	height:86px;
+	width:30px;
+	font-size:18px;
+	margin-top:20px;
 }
+
+#item .subjectStatus img{
+		float:right;
+	width: 113px;	
+	margin-left:0px;
+
+}
+
 
 
