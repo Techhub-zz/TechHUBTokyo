@@ -17,11 +17,11 @@
 
 /*base-size*/
 #item .subjectTitle {
-	height:92px;
+	height:50px;
 }
 
 #item .subjectDetail {
-	height:70px;
+	height:64px;
 }
 
 #item img {
@@ -35,15 +35,15 @@
   -o-box-shadow: 0 0 0px #ebebeb;
   -ms-box-shadow: 0 0 0px #ebebeb;
 
-  padding: 5px;
+  padding: 0px;
 }
 
 #item .imageBox img {
 	float:left;
-	width: 80px;
-	height: 80px;
+	width: 50px;
+	height: 50px;
 	
-	margin:0 2px 0 2px;
+	margin:0 5px 0 5px;
 }
 
 /*main:subject*/
@@ -52,9 +52,9 @@
 }
 
 #item .titleBlock {
-	margin-top:24px;
+	margin-top:4px;
 	float:left;
-	font-size:42px;
+	font-size:40px;
 }
 
 #item .subjects .titleBlock p {	
@@ -68,9 +68,9 @@
 }
 
 #item  .subjectDate {
-	width:182px;
-	height:70px;
-	float:left;
+	width: 115px;
+	height: 64px;
+	float: left;
 }
 
 #item  .subjectDate .year {
@@ -96,13 +96,11 @@
 }
 
 #item .subjectDescription .description {
-	
-	font-size:16px;
-	margin-top:5px;
-	margin-left:190px;
-	font-weight:bold;
-	
-  	line-height:1.3em;
+	font-size: 16px;
+	margin-top: 5px;
+	margin-left: 115px;
+	font-weight: bold;
+	line-height: 1.3em;
 }
 
 
@@ -110,7 +108,7 @@
 #item .subjectStatus {
 	float:right;
 	background-color:#ffffff;
-	height:40px;
+	height:29px;
 }
 #item .subjectStatus .limit {
 	float:left;
@@ -126,8 +124,8 @@
 	font-size:24px;
 	font-weight:bold;
 	
-	margin-left:26px;
-	margin-top:10px;
+	margin-left:14px;
+	margin-top:6px;
 }
 #item .subjectStatus .maxNum {
 	color:#000000;
@@ -143,7 +141,7 @@
 	float:left;
 	width:30px;
 	font-size:18px;
-	margin-top:20px;
+	margin-top:10px;
 }
 
 #item .subjectStatus img{
