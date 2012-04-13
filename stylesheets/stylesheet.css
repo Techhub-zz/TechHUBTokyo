@@ -293,7 +293,14 @@ Full-Width Styles
 }
 
 #header_wrap {
-  background: #77d1e5;
+  	background: #77d1e5;
+	background: -moz-radial-gradient(center, ellipse cover,  #2ce8e1 0%, #77d1e5 78%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#2ce8e1), color-stop(78%,#77d1e5));
+	background: -webkit-radial-gradient(center, ellipse cover,  #2ce8e1 0%,#77d1e5 78%);
+	background: -o-radial-gradient(center, ellipse cover,  #2ce8e1 0%,#77d1e5 78%);
+	background: -ms-radial-gradient(center, ellipse cover,  #2ce8e1 0%,#77d1e5 78%);
+	background: radial-gradient(center, ellipse cover,  #2ce8e1 0%,#77d1e5 78%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2ce8e1', endColorstr='#77d1e5',GradientType=1 );
 }
 
 #header_wrap .inner {
