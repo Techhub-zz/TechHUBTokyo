@@ -7,11 +7,6 @@
 	padding-top:10px;
 	padding-bottom:10px;
 	
-	p {
-		line-height: 1em;
-		margin: 0px 0px 0em;
-	}
-	
 	img {
 		margin: 0px 0 0px 0;
 		border: 0px solid #ebebeb;
@@ -25,38 +20,44 @@
 		padding: 0px;	
 	}
 	
-	.imageBox img {
-		float:left;
-		width: 50px;
-		height: 50px;
-		margin:0 5px 0 5px;
+	p {
+		line-height: 1em;
+		margin: 0px 0px 0em;
 	}
 	
-	.subjects {
-		float:left;
-		
-		.titleBlock p {	
-			font-size:42px;
-			font-weight:bold;
-
-			margin-top:10px;
-			margin-left:5px;
-			height:56px;
-			color:#666666;
-		}
-	}
-	.titleBlock {
-		margin-top:8px;
-		float:left;
-		font-size:34px;
-	}
+	
 	.subjectTitle {
 		height:50px;
+		
+		.imageBox img {
+			float:left;
+			width: 50px;
+			height: 50px;
+			margin:0 5px 0 5px;
+		}
+
+		.subjects {
+			float:left;
+
+			.titleBlock p {	
+				font-size:42px;
+				font-weight:bold;
+
+				margin-top:10px;
+				margin-left:5px;
+				height:56px;
+				color:#666666;
+			}
+		}
+		.titleBlock {
+			margin-top:8px;
+			float:left;
+			font-size:34px;
+		}
 	}
 	
 	.subjectDetail {
 		height:64px;
-		
 		.subjectDate {
 			width: 115px;
 			height: 64px;
@@ -85,6 +86,7 @@
 			margin-left:10px;
 
 			.description {
+//				background-color:#000000;
 				font-size: 16px;
 				margin-top: 5px;
 				margin-left: 115px;
@@ -92,24 +94,23 @@
 				line-height: 1.3em;
 			}
 		}
+		
 	}
-	
-	
 	.subjectStatus {
 		height:29px;
-		
+		background-color:#d8d8d8+#111;
 		.subjectStatusRight {
 			height:29px;
 			float:right;
 			color:#ffffff;
 			background-color:#000000;
-			
+
 			img{
 				float:right;
 				width: 113px;	
 				margin-left:0px;		
 			}
-		
+
 			.limit {
 				float:left;
 				width:30px;
@@ -117,7 +118,7 @@
 				margin-top:5px;
 				margin-left:2px;
 			}
-		
+
 			.peopleNum {
 
 				float:left;
@@ -128,7 +129,7 @@
 				margin-left:14px;
 				margin-top:4px;
 			}
-		
+
 			.maxNum {
 
 				float:left;
@@ -139,7 +140,7 @@
 				margin-left:26px;
 				margin-top:4px;
 			}
-		
+
 			.num {
 				float:left;
 				width:30px;
@@ -147,6 +148,8 @@
 				margin-top:10px;
 			}
 		}
-		
+
 	}
+	
+	
 }

@@ -5,10 +5,6 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.itemList p {
-  line-height: 1em;
-  margin: 0px 0px 0em;
-}
 .itemList img {
   margin: 0px 0 0px 0;
   border: 0px solid #ebebeb;
@@ -19,16 +15,23 @@
   -ms-box-shadow: 0 0 0px #ebebeb;
   padding: 0px;
 }
-.itemList .imageBox img {
+.itemList p {
+  line-height: 1em;
+  margin: 0px 0px 0em;
+}
+.itemList .subjectTitle {
+  height: 50px;
+}
+.itemList .subjectTitle .imageBox img {
   float: left;
   width: 50px;
   height: 50px;
   margin: 0 5px 0 5px;
 }
-.itemList .subjects {
+.itemList .subjectTitle .subjects {
   float: left;
 }
-.itemList .subjects .titleBlock p {
+.itemList .subjectTitle .subjects .titleBlock p {
   font-size: 42px;
   font-weight: bold;
   margin-top: 10px;
@@ -36,13 +39,10 @@
   height: 56px;
   color: #666666;
 }
-.itemList .titleBlock {
+.itemList .subjectTitle .titleBlock {
   margin-top: 8px;
   float: left;
   font-size: 34px;
-}
-.itemList .subjectTitle {
-  height: 50px;
 }
 .itemList .subjectDetail {
   height: 64px;
@@ -79,6 +79,7 @@
 }
 .itemList .subjectStatus {
   height: 29px;
+  background-color: #e9e9e9;
 }
 .itemList .subjectStatus .subjectStatusRight {
   height: 29px;
