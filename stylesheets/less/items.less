@@ -25,10 +25,16 @@
 		margin: 0px 0px 0em;
 	}
 	
-	
 	.subjectTitle {
 		height:50px;
-		
+		&:hover {
+			background-color:#f7f7f7;
+			
+			@radius:5px;
+		  	border-radius: @radius;
+		  	-webkit-border-radius: @radius;
+		  	-moz-border-radius: @radius;
+		}
 		.imageBox img {
 			float:left;
 			width: 50px;
@@ -49,6 +55,7 @@
 				color:#666666;
 			}
 		}
+		
 		.titleBlock {
 			margin-top:8px;
 			float:left;
@@ -98,7 +105,23 @@
 	}
 	.subjectStatus {
 		height:29px;
-		background-color:#d8d8d8+#111;
+	
+		.weekInfo {
+			background-color:#89d4e5;
+			color:#ffffff;
+			
+			@radius:2px;
+		  	border-radius: @radius;
+		  	-webkit-border-radius: @radius;
+		  	-moz-border-radius: @radius;
+			
+			float:left;
+			font-size:29px;
+			font-weight:bold;
+			
+			margin-left: 5px;
+		}		
+		
 		.subjectStatusRight {
 			height:29px;
 			float:right;
@@ -120,7 +143,6 @@
 			}
 
 			.peopleNum {
-
 				float:left;
 				width:30px;	
 				font-size:24px;
@@ -131,7 +153,6 @@
 			}
 
 			.maxNum {
-
 				float:left;
 				width:10px;	
 				font-size:20px;
@@ -150,6 +171,9 @@
 		}
 
 	}
-	
-	
+}
+
+.delim {
+	margin:23px 0px 23px 0px;
+	border:2px dashed #ced4d6;
 }

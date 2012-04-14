@@ -35,7 +35,7 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
 	
-	<li class = "itemList">
+	<li class="itemList">
 		<div id="item">
 			<div class="subjectTitle">
 				<div class="imageBox">
@@ -52,8 +52,6 @@
 				<div class="subjectDate">
 						<p id="yearID0" class="year"></p>
 						<p id="monthAndDayID0" class="monthAndDay"></p>
-						<p id="weekID0" class="week"></p>
-						<p id="subscriptionID0" class="subjectDescription"></p>
 					</div>			
 				<div class="subjectDescription">
 						<p id="subjectDescriptionID0" class="description"></p>
@@ -61,6 +59,8 @@
 				
 			</div>
 			<div class="subjectStatus">
+				<div id="weekID0"></div>
+				
 				<div class="subjectStatusRight">
 					
 					<p class="limit">定員</p>
@@ -75,6 +75,48 @@
 			
 		</div>
 	</li>
+	<div class="delim"></div>
+	<li class = "itemList">
+		<div id="item">
+			<div class="subjectTitle">
+				<div class="imageBox">
+					<a id="mapLinkID1" href=""><img id="mapImageID1" src="" /></a>
+					<a id="titleImageID1" href="http://www.techhubjp.org/subjectdetail?index=">
+						<img id="subjectImageID1"src="" />
+						<p id="subjectTitleID1" class="titleBlock"></p>
+					</a>	
+				</div>
+
+			</div>
+
+			<div class="subjectDetail">
+				<div class="subjectDate">
+						<p id="yearID1" class="year"></p>
+						<p id="monthAndDayID1" class="monthAndDay"></p>
+					</div>			
+				<div class="subjectDescription">
+						<p id="subjectDescriptionID1" class="description"></p>
+					</div>	
+
+			</div>
+			<div class="subjectStatus">
+				<div id="weekID1"></div>
+
+				<div class="subjectStatusRight">
+
+					<p class="limit">定員</p>
+					<p id="peopleNumID1" class="peopleNum"></p>
+					<p class="num">名</p>
+
+					<a id="contentsID1" href="http://www.techhubjp.org/subjectdetail?index=">
+						<img id="detailImageID1" src="" />
+					</a>
+				</div>
+			</div>
+
+		</div>
+	</li>
+
 	</section>
     </div>
 	
@@ -171,11 +213,22 @@
 					break;
 					
 					case 8://weekID
-					setInnerTextID("weekID"+row, escapeHtml(data.getFormattedValue(row, col)));
+					var str = escapeHtml(data.getFormattedValue(row, col));
+					var array = str.split(',');
+					
+					for (currentDate in array) {
+						var element = document.createElement('p');
+						element.id = "day";
+						element.className = "weekInfo";
+						element.innerHTML = array[currentDate];
+						var id = "weekID" + row;
+						var objBody = document.getElementById(id);
+						objBody.appendChild(element);
+					}
 					break;
 					
 					case 9://subscriptionID
-					setInnerTextID("subscriptionID"+row, escapeHtml(data.getFormattedValue(row, col)));
+				//	setInnerTextID("subscriptionID"+row, escapeHtml(data.getFormattedValue(row, col)));
 					break;
 					
 					case 10://subjectDescriptionID
