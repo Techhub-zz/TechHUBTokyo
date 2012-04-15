@@ -293,7 +293,17 @@ Full-Width Styles
 }
 
 #header_wrap {
-  background: #77d1e5;
+	@centerSpotColor:#77d1e5+#1c1c1c;
+	@baseColor:#77d1e5;
+	
+	background: @baseColor;
+	background: -moz-radial-gradient(center, ellipse cover,  @centerSpotColor 0%, @baseColor 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,@centerSpotColor), color-stop(100%,@baseColor));
+	background: -webkit-radial-gradient(center, ellipse cover,  @centerSpotColor 0%,@baseColor 100%);
+	background: -o-radial-gradient(center, ellipse cover,  @centerSpotColor 0%,@baseColor 100%);
+	background: -ms-radial-gradient(center, ellipse cover,  @centerSpotColor 0%,@baseColor 100%);
+	background: radial-gradient(center, ellipse cover,  @centerSpotColor 0%,@baseColor 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@centerSpotColor', endColorstr='@baseColor',GradientType=1 );
 }
 
 #header_wrap .inner {

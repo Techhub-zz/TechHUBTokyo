@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="Techhubtokyo : TechHUBTokyo website" />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/less" media="screen" href="stylesheets/less/stylesheet.less">
 	<link rel="stylesheet" type="text/css" href="stylesheets/basic.css"/>
 	<link rel="stylesheet" type="text/less" href="stylesheets/less/items.less"/>
 	<script type="text/javascript" src="javascripts/less-1.3.0.min.js"></script>
@@ -397,22 +397,46 @@
 					// 					setInnerTextID("monthAndDayID"+row, escapeHtml(data.getFormattedValue(row, col)));
 					// 					break;
 					
-					case 8://weekID
-					
+					case 8://Tags
 					var str = escapeHtml(data.getFormattedValue(row, col));
 					var array = str.split(',');
 					
-					for (currentDate in array) {
+					for (currentData in array) {
+						var dataTag = document.createElement('div');
+						dataTag.className = "subjectInfo";
+						
+						var outsideATag;
 						var element = document.createElement('p');
-						element.id = "day";
 						
-						element.className = "weekInfo";
-						if (4 < array.length) element.className = "weekInfoMini";
+						var appnedingElement = element;
 						
-						element.innerHTML = array[currentDate];
+						var text = array[currentData];
+						
+						var fixedCssClassName = "default";
+						if (4 < array.length) fixedCssClassName = "mini";//too many tags
+						
+						if (text.indexOf('^') != -1) {//drop into a-tag for "link"
+							outsideATag = document.createElement('a');
+ 							outsideATag.appendChild(element);
+							outsideATag.id = "subjectTagLink"+row;
+							
+							fixedCssClassName = fixedCssClassName + "WithALink";
+							
+							//set link
+							outsideATag.href = text.slice(text.indexOf('^')+1, text.length);
+							text = text.slice(0,text.indexOf('^'));
+							
+							appnedingElement = outsideATag;
+						}
+						
+						element.className = fixedCssClassName;
+						
+						element.innerHTML = text;
 						var id = "weekID" + row;
 						var objBody = document.getElementById(id);
-						objBody.appendChild(element);
+						
+						dataTag.appendChild(appnedingElement);
+						objBody.appendChild(dataTag);
 					}
 					break;
 					
