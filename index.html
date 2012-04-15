@@ -39,25 +39,27 @@
 		<div id="item">
 			<div class="subjectTitle">
 				<div class="imageBox">
-					<a id="mapLinkID0" href=""><img id="mapImageID0" src="" /></a>
-					<a id="titleImageID0" href="http://www.techhubjp.org/subjectdetail?index=">
+					
+					<a id="mapLinkID0" href="">
+						<img id="mapImageID0" src="" />
+					</a>
+					
+					<a id="titleImageID0" href="linkto">
 						<img id="subjectImageID0"src="" />
 						<p id="subjectTitleID0" class="titleBlock"></p>
-					</a>	
+					</a>
+					
+				</div>
+			</div>
+			
+			<div class="subjectPlace">
+				<div class="subjectDate">
+					<p id="yearID0" class="year"></p>
+					<p id="monthAndDayID0" class="monthAndDay"></p>
 				</div>
 				
 			</div>
 			
-			<div class="subjectDetail">
-				<div class="subjectDate">
-						<p id="yearID0" class="year"></p>
-						<p id="monthAndDayID0" class="monthAndDay"></p>
-					</div>			
-				<div class="subjectDescription">
-						<p id="subjectDescriptionID0" class="description"></p>
-					</div>	
-				
-			</div>
 			<div class="subjectStatus">
 				<div id="weekID0"></div>
 				
@@ -75,47 +77,8 @@
 			
 		</div>
 	</li>
+
 	<div class="delim"></div>
-	<li class = "itemList">
-		<div id="item">
-			<div class="subjectTitle">
-				<div class="imageBox">
-					<a id="mapLinkID1" href=""><img id="mapImageID1" src="" /></a>
-					<a id="titleImageID1" href="http://www.techhubjp.org/subjectdetail?index=">
-						<img id="subjectImageID1"src="" />
-						<p id="subjectTitleID1" class="titleBlock"></p>
-					</a>	
-				</div>
-
-			</div>
-
-			<div class="subjectDetail">
-				<div class="subjectDate">
-						<p id="yearID1" class="year"></p>
-						<p id="monthAndDayID1" class="monthAndDay"></p>
-					</div>			
-				<div class="subjectDescription">
-						<p id="subjectDescriptionID1" class="description"></p>
-					</div>	
-
-			</div>
-			<div class="subjectStatus">
-				<div id="weekID1"></div>
-
-				<div class="subjectStatusRight">
-
-					<p class="limit">定員</p>
-					<p id="peopleNumID1" class="peopleNum"></p>
-					<p class="num">名</p>
-
-					<a id="contentsID1" href="http://www.techhubjp.org/subjectdetail?index=">
-						<img id="detailImageID1" src="" />
-					</a>
-				</div>
-			</div>
-
-		</div>
-	</li>
 
 	</section>
     </div>
@@ -124,8 +87,8 @@
 <script type="text/javascript">
 
 	function addRefToID(linkID, addURL) {
-//		var baseTag0 = document.getElementById(linkID);
-//		baseTag0.href = baseTag0.href + addURL;
+		var baseTag0 = document.getElementById(linkID);
+		baseTag0.href = baseTag0.href + addURL;
 	}
 
 	function setRefToID(linkID, linkURL) {
@@ -172,7 +135,7 @@
 			replace(/>/g, '>').
 			replace(/"/g, '"');
 		}
-	  	for (var row = 0; row < data.getNumberOfRows(); row++) {
+	  	for (var row = 0; row < 1; row++) {
 
 			var currentIndex = escapeHtml(data.getFormattedValue(row, 14));//ID	param
 			addRefToID("contentsID"+row, currentIndex-0);
@@ -180,39 +143,51 @@
 			
 			for (var col = 0; col < data.getNumberOfColumns(); col++) {
 				switch (col) {
+					case 0://mapImageID
+					alert("0");
+					setImageToID("mapImageID"+row, escapeHtml(data.getFormattedValue(row, col)));
+					break;
+					
 					case 1://mapLinkID
+					alert("1");
 					setRefToID("mapLinkID"+row, escapeHtml(data.getFormattedValue(row, col)));
 					break;
 					
-					case 0://mapImageID
-					setImageToID("mapImageID"+row, escapeHtml(data.getFormattedValue(row, col)));
+				
+					case 2://logoImageID
+					alert("2");
+					setImageToID("logoImageID"+row, escapeHtml(data.getFormattedValue(row, col)));
 					break;
 										
 					case 3://logoLinkID
-					//setRefToID("logoLinkID"+row, escapeHtml(data.getFormattedValue(row, col)));
+					alert("3");
+					setRefToID("logoLinkID"+row, escapeHtml(data.getFormattedValue(row, col)));
 					break;
 					
-					case 2://logoImageID
-					//setImageToID("logoImageID"+row, escapeHtml(data.getFormattedValue(row, col)));
-					break;
+					
 
 					case 4://subjectImageID
+					alert("4");
 					setImageToID("subjectImageID"+row, escapeHtml(data.getFormattedValue(row, col)));
 					break;
 					
 					case 5://subjectTitleID
+					alert("5");
 					setInnerTextID("subjectTitleID"+row, escapeHtml(data.getFormattedValue(row, col)));
 					break;
 					
 					case 6://yearID
+					alert("6");
 					setInnerTextID("yearID"+row, escapeHtml(data.getFormattedValue(row, col)));
 					break;
 					
 					case 7://monthAndDayID
+					alert("7");
 					setInnerTextID("monthAndDayID"+row, escapeHtml(data.getFormattedValue(row, col)));
 					break;
 					
 					case 8://weekID
+					alert("8");
 					var str = escapeHtml(data.getFormattedValue(row, col));
 					var array = str.split(',');
 					
@@ -228,20 +203,23 @@
 					break;
 					
 					case 9://subscriptionID
-				//	setInnerTextID("subscriptionID"+row, escapeHtml(data.getFormattedValue(row, col)));
+					alert("9");
+					setInnerTextID("subscriptionID"+row, escapeHtml(data.getFormattedValue(row, col)));
 					break;
 					
 					case 10://subjectDescriptionID
+					alert("10");
 					setInnerTextID("subjectDescriptionID"+row, escapeHtml(data.getFormattedValue(row, col)));
 					break;
 					
 					case 11://peopleNumID
+					alert("11");
 					setInnerTextID("peopleNumID"+row, escapeHtml(data.getFormattedValue(row, col)));
 					break;
 					
 					
 					case 12://detailImageID
-					
+					alert("12");
 					var num = escapeHtml(data.getFormattedValue(row, col));
 					switch (num) {
 						case "0":
