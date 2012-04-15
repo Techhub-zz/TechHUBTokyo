@@ -66,24 +66,16 @@
 	.subjectDetail {
 		height:64px;
 		.subjectPlace {
-			width: 115px;
-			height: 64px;
+			max-width: 115px;
+			max-height: 64px;
 			float: left;
-
-/*			.year {
-				float:left;
-				font-size:18px;
-				margin-top:5px;
+			
+			img {
+				width: 110px;
+				height: 58px;
 				margin-left:5px;
-				width:56px;
+				margin-right:5px;
 			}
-
-			.monthAndDay {
-				font-size:18px;
-				font-weight:bold;
-				margin-left:5px;
-				margin-top:5px;
-			}*/
 		}
 		
 		.subjectDescription {
@@ -100,9 +92,9 @@
 				font-weight: bold;
 				line-height: 1.3em;
 			}
-		}
-		
+		}	
 	}
+	
 	.subjectStatus {
 		height:29px;
 	
@@ -120,7 +112,28 @@
 			font-weight:bold;
 			
 			margin-left: 5px;
-		}		
+			
+			
+		}
+		
+		//mini size(daytags larger than 4)
+		.weekInfoMini {
+			background-color:#89d4e5;
+			color:#ffffff;
+			
+			@radius:2px;
+		  	border-radius: @radius;
+		  	-webkit-border-radius: @radius;
+		  	-moz-border-radius: @radius;
+			
+			float:left;
+			font-weight:bold;
+			
+			margin-left: 5px;
+			
+			font-size:20px;
+		}
+				
 		
 		.subjectStatusRight {
 			height:29px;
