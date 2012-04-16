@@ -17,7 +17,15 @@
 		-o-box-shadow: 0 0 0px #ebebeb;
 		-ms-box-shadow: 0 0 0px #ebebeb;
 
-		padding: 0px;	
+		padding: 0px;
+		
+		&:hover {
+			opacity: 0.8;
+		  	-webkit-transition: opacity .25s linear;
+		  	-moz-transition: opacity .25s linear;
+		  	-o-transition: opacity .25s linear;
+		  	transition: opacity .25s linear;
+		}
 	}
 	
 	p {
@@ -27,14 +35,7 @@
 	
 	.subjectTitle {
 		height:50px;
-		&:hover {
-			background-color:#f7f7f7;
-			
-			@radius:5px;
-		  	border-radius: @radius;
-		  	-webkit-border-radius: @radius;
-		  	-moz-border-radius: @radius;
-		}
+	
 		.imageBox img {
 			float:left;
 			width: 50px;
