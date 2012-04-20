@@ -328,43 +328,59 @@ Full-Width Styles
 
 #downloads {
   position: absolute;
-  width: 210px;
+  width: 310px;
   z-index: 10;
-  top: 140px;
-  right: 0px;
+  top: 160px;
+  right: 60px;
 
   height: 50px;
   //background: url('../../images/icon_download.png') no-repeat 0% 90%;
 }
 
-.zip_download_link {
-  display: block;
-  float: left;
-  width: 50px;
-  height:50px;
-  overflow: hidden;
+.icons {
+	float:right;
+	
+	.tweet {
+	  	display: block;
+	  	float: left;
+	  	width: 50px;
+	  	height:50px;
+	  	overflow: hidden;
 
-  text-indent: -5000px;
-  background: url(../../images/twitter_newbird_white_blue.png) no-repeat top right
-}
+	  	text-indent: -5000px;
+	  	background: url(../../images/twitter_newbird_white_blue.png) no-repeat top right;
+		&:hover {
+	  		background: url(../../images/twitter_newbird_white_blue.png) no-repeat bottom right;
+		}
+	}
 
-.tar_download_link {
-  display: block;
-  float: left;
-  width: 50px;
-  height:50px;
-  overflow: hidden;
+	.message {
+	  display: block;
+	  float: left;
+	  width: 50px;
+	  height:50px;
+	  overflow: hidden;
 
-  text-indent: -5000px;
-  background: url(../../images/mail_white_blue.png) no-repeat top right;
-}
+	  text-indent: -5000px;
+	  background: url(../../images/mail_white_blue.png) no-repeat top right;
+		&:hover {
+		  background: url(../../images/mail_white_blue.png) no-repeat bottom right;
+		}
+	}
 
-.zip_download_link:hover {
-  background: url(../../images/twitter_newbird_white_blue.png) no-repeat bottom right;
-}
+	.backnumber {
+	  display: block;
+	  float: left;
+	  width: 50px;
+	  height:50px;
+	  overflow: hidden;
 
-.tar_download_link:hover {
-  background: url(../../images/mail_white_blue.png) no-repeat bottom right;
+	  text-indent: -5000px;
+	  background: url(../../images/backnumber_white_blue.png) no-repeat top right;
+		&:hover {
+		  background: url(../../images/backnumber_white_blue.png) no-repeat bottom right;
+		}
+	}
 }
 
 #main_content_wrap {
