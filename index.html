@@ -24,10 +24,12 @@
 
           <section id="downloads">
 			<div class="icons">
+				
+				<a class="concept" href="html/concept.html">concept</a>
+				<a class="backnumber" href="html/backnumber.html">backnumber</a>
             	<a class="tweet" href="http://twitter.com/#!/techhubjp">Twitter</a>
                 <a class="message" href="mailto:techhub.tokyo@gmail.com">message</a>
-
-				<a class="backnumber" href="html/backnumber.html">backnumber</a>
+				
 			</div>
             </section>
         </header>
@@ -149,7 +151,12 @@
 
 	function addRefToID(linkID, addURL) {
 		var baseTag0 = document.getElementById(linkID);
-		baseTag0.href = baseTag0.href + addURL;
+		//get current domain
+		domains = location.href.split(/\/+/g);
+		delete domains[domains.length - 1];
+		domains = domains.join('/');
+		
+		baseTag0.href = domains + addURL;
 	}
 
 	function setRefToID(linkID, linkURL) {
@@ -198,9 +205,9 @@
 		}
 	  	for (var row = 0; row < data.getNumberOfRows(); row++) {
 
-			var currentIndex = escapeHtml(data.getFormattedValue(row, 14));//ID	param
-			addRefToID("contentsID"+row, currentIndex-0);
-			addRefToID("titleImageID"+row, currentIndex-0);
+			var currentIndex = escapeHtml(data.getFormattedValue(row, 6));//ID	param
+			addRefToID("contentsID"+row, currentIndex);
+			addRefToID("titleImageID"+row, currentIndex);
 			
 			for (var col = 0; col < data.getNumberOfColumns(); col++) {
 				switch (col) {
