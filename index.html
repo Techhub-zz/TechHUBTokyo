@@ -73,7 +73,7 @@
 			</div>
 			
 			<div class="subjectStatus">
-				<div id="weekID0"></div>
+			
 				
 				<div class="subjectStatusRight">
 					
@@ -85,6 +85,8 @@
 						<img id="detailImageID0" src="" />
 					</a>
 				</div>
+				<div id="weekID0" class="subjectStatusLeft"></div>
+				
 			</div>
 			
 		</div>
@@ -124,7 +126,7 @@
 			</div>
 
 			<div class="subjectStatus">
-				<div id="weekID1"></div>
+				
 
 				<div class="subjectStatusRight">
 
@@ -136,6 +138,7 @@
 						<img id="detailImageID1" src="" />
 					</a>
 				</div>
+				<div id="weekID1" class="subjectStatusLeft"></div>
 			</div>
 
 		</div>
@@ -269,8 +272,7 @@
 						
 						var text = array[currentData];
 						
-						var fixedCssClassName = "default";
-						if (4 < array.length) fixedCssClassName = "mini";//too many tags
+						var fixedCssClassName = "mini";
 						
 						if (text.indexOf('^') != -1) {//drop into a-tag for "link"
 							outsideATag = document.createElement('a');
